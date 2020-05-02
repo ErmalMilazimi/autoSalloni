@@ -19,6 +19,7 @@ body{
     position: fixed;
     background: whitesmoke;
     opacity: 0.8;
+    z-index: 100;
 }
 
 .header:hover{
@@ -119,7 +120,6 @@ body{
     padding: 0;
     height: 500px;
     width: inherit;
-    transition: 0.2s;
 }
 
 .markatK a{
@@ -154,16 +154,41 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
-}
-
-.markaK:hover{
-    width: 12.5%;
-    transition: 0.2s;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
 .markatK a:hover{
-    width: 50%;
+    width: 100%;
     transition: 0.2s;
+}
+
+a .marka .markaContent{
+    position: absolute;
+    height: 10%;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, .8);
+	box-sizing: border-box;
+	color: #fff;
+	opacity: 0;
+}
+
+a .marka .markaContent .markaTxt{
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+a .marka:hover .markaContent{
+    bottom: 0;
+	transition: 0.3s;
+	transition-delay: 0.1s;
+	opacity: 1;
 }
 
 /* ------------ */
