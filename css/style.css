@@ -9,6 +9,11 @@ body{
     margin: 0;
     padding: 0;
 }
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
 /* headeri me nav */
 .header{
     width: 100%;
@@ -59,8 +64,9 @@ body{
 
 .banneri{
     width: 100%;
-    height: 690px;
+    height: 100vh;
 }
+
 .bannerS{
     width: 100%;
     height: inherit;
@@ -160,7 +166,7 @@ body{
 }
 
 .markatK a:hover{
-    width: 100%;
+    width: 120%;
     transition: 0.2s;
 }
 
@@ -192,6 +198,47 @@ a .marka:hover .markaContent{
 }
 
 /* ------------ */
+/* Markat 2 */
+
+.markaTjera{
+    background: lightgray;
+    margin: 15px auto;
+    width: 80%;
+    height: 400px;
+    text-align: center;
+    padding: 0 20px 10px 20px;
+}
+
+.markaTjera>p{
+    height: auto;
+    margin: 15px;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.markaTjera div{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 20px;
+}
+
+.markaTjera div .markat2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.markaTjera div .markat2 img{
+    width: 100px;
+    height: 100px;
+    margin: 15px auto;
+}
+.markaTjera div .markat2 h3{
+    margin: 0 auto;
+}
+/* ------------ */
 /* footeri */
 .footeri{
     display: flex;
@@ -208,7 +255,7 @@ a .marka:hover .markaContent{
 
 .footeri h3{
     font-size: 17px;
-    margin: 10px;
+    margin: 10px 0px;
 }
 
 .text-box ul {
@@ -235,4 +282,8 @@ a .marka:hover .markaContent{
     padding: 0;
 }
 
+#simboletFooter{
+    color: white;
+    margin-right: 5px;
+}
 /* ------------ */
