@@ -86,6 +86,28 @@ body{
     left: 50px;
     font-size: 100px;
     margin: 0;
+
+}
+
+.bannerT p{
+    margin: 0;
+}
+
+.bannerT .bannerBtn{
+    height: 50px;
+    background-color: red;
+    border: 0;
+    border-radius: 10px;
+    margin: 0 0 50px 0;
+    color: #fff;
+    font-size: 18px;
+    padding: 2px 15px;
+    cursor: pointer;
+}
+
+.bannerT .bannerBtn:hover{
+    background-color: rgb(201, 0, 0);
+    
 }
 
 .auto {
@@ -220,7 +242,7 @@ a .marka:hover .markaContent{
 .markaTjera .wrap{
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: baseline;
     flex-wrap: wrap;
     margin: 5px;
     height: 80%;
