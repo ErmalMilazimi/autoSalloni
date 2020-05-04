@@ -1,0 +1,145 @@
+.bannerC{
+    width: 100%;
+	height: 400px;
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), 
+        url(../img/contact.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.contactUs{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+.mainC{
+    background: lightgray;
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    padding: 20px 90px;
+}
+
+.mainC .left{
+    width: 550px;
+    height: 380px;
+}
+
+.mainC .left p{
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputet{
+    width: 400px;
+    height: 40px;
+    font-size: 17px;
+    padding-left: 8px;
+    margin: 10px 0;
+    border: 2px solid white;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.inputet:focus{
+    border: 2px solid green;
+    transition: 0.2s;
+}
+
+textarea{
+    height: 120px;
+    width: 400px;
+    padding: 5px 7px;
+    margin-top: 5px;
+    font-size: 17px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+textarea:focus{
+    border: 2px solid green;
+    transition: 0.2s;
+}
+
+.btnDiv{
+    height: 70px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactBtn{
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: gray;
+    border: 0;
+    transition: 0.3s;
+}
+
+.contactBtn:hover{
+    background: red;
+    color: white;
+    transition: 0.3s;
+}
+
+.contactBtn:active{
+    background: green;
+    color: white;
+    transition: 0.3s;
+}
+
+.mainC .right{
+    width: 550px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simboletC{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.simboletC p{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.fas{
+    font-size: 30px;
+}
+
+.rightNames{
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.rightNames h1{
+    margin: 20px 0 5px 0;
+}
+
+.rightNames h2{
+    margin: 23px;
+}
