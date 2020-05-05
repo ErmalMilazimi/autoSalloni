@@ -10,10 +10,6 @@ body{
     padding: 0;
 }
 
-::-webkit-scrollbar{
-    width: 0;
-}
-
 /* headeri me nav */
 .header{
     width: 100%;
