@@ -136,6 +136,10 @@
     border: 2px solid green;
 }
 
+.inputKlasa.success textarea{
+    border: 2px solid green;
+}
+
 .inputKlasa.success i.fa-check-circle{
     color: green;
     visibility: visible;
