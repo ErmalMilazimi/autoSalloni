@@ -146,12 +146,6 @@ body{
     width: inherit;
 }
 
-.markatK a{
-    width: 20%;
-    height: inherit;
-    transition: 0.2s;
-}
-
 .markatK .audi{
     background: url(../img/audiLogo2.jpg);
 }
@@ -169,8 +163,9 @@ body{
 .markatK .vw {
     background: url(../img/vwLogo2.jpg);
 }
+
 .markatK .marka{
-    width: 100%;
+    width: 20%;
     height: inherit;
     display: flex;
     justify-content: center;
@@ -181,14 +176,15 @@ body{
     position: relative;
     text-align: center;
     overflow: hidden;
-}
-
-.markatK a:hover{
-    width: 120%;
     transition: 0.2s;
 }
 
-a .marka .markaContent{
+.markatK .marka:hover{
+    width: 120%;
+    transition: 0.4s;
+}
+
+.marka .markaContent{
     position: absolute;
     height: 10%;
 	bottom: -100%;
@@ -200,7 +196,7 @@ a .marka .markaContent{
 	opacity: 0;
 }
 
-a .marka .markaContent .markaTxt{
+.marka .markaContent .markaTxt{
     color: white;
     display: inline-block;
     font-size: 13px;
@@ -208,7 +204,7 @@ a .marka .markaContent .markaTxt{
     margin: 0;
 }
 
-a .marka:hover .markaContent{
+.marka:hover .markaContent{
     bottom: 0;
 	transition: 0.3s;
 	transition-delay: 0.1s;
@@ -222,7 +218,7 @@ a .marka:hover .markaContent{
     background: lightgray;
     margin: 15px auto;
     width: 80%;
-    height: 300px;
+    height: auto;
     text-align: center;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -244,14 +240,13 @@ a .marka:hover .markaContent{
     height: 80%;
 }
 
-.markaTjera div .markat2{
+.markaTjera .wrap .markat2{
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: 0.2s;
     margin: 0 2px;
-    width: 200px;
-    height: 200px;
+    width: 180px;
 }
 
 .markaTjera div .markat2 img{

@@ -15,6 +15,28 @@ form.addEventListener('submit', (e) => {
 });
 
 name.onblur = function(){
+    isName();
+}
+
+email.onblur = function (){
+    isEmail();
+}
+
+komenti.onblur = function(){
+    isKoment();
+}
+
+function checkInput() {
+    isName();
+    isEmail();
+    isKoment();
+
+    if( indexN > 0 && indexE > 0 && indexK > 0 ){
+        window.alert('Mesazhi u dergua me sukses!');
+    }
+}
+
+function isName(){
     const nameValue = name.value.trim();
     if (nameValue === '') {
         setErrorFor(name, 'Kjo fushe nuk mund te lihet e zbrazet!');
@@ -22,50 +44,32 @@ name.onblur = function(){
         setErrorFor(name, 'Emri duhet ti ket meshum se tri shkonja!')
     } else {
         setSuccessFor(name);
+        indexN++;
     }
 }
 
-email.onblur = function (){
+function isEmail(){
     const emailValue = email.value.trim();
+    let em =  emailValue.split('@');
+    let em1 = em[1];
+
     if (emailValue === '') {
         setErrorFor(email, 'Kjo fushe nuk mund te lihet e zbrazet!');
+    }else if(!emailValue.includes('@') || em1.length < 3 ){
+        setErrorFor(email, 'Nuk eshte email valide!');
     } else {
         setSuccessFor(email);
+        indexE++;
     }
 }
 
-komenti.onblur = function(){
+function isKoment(){
     const komentiValue = komenti.value.trim();
     if (komentiValue === '') {
         setErrorFor(komenti, 'Kjo fushe nuk mund te lihet e zbrazet!');
-    }else {
+    } else {
         setSuccessFor(komenti);
-    }
-}
-
-function checkInput() {
-    const nameValue = name.value.trim();
-    const emailValue = email.value.trim();
-    const komentiValue = komenti.value.trim();
-
-    if (nameValue === '') {
-    }else if(nameValue.length < 3 ){
-    } else {
-        indexN++;
-    }
-
-    if (emailValue === '') {
-    } else {
-        indexE++;
-    }
-
-    if (komentiValue === '') {
-    }else {
         indexK++;
-    }
-
-    if( indexN > 0 && indexE > 0 && indexK > 0 ){
-        window.alert('Mesazhi u dergua me sukses!');
     }
 }
 
