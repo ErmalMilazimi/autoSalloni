@@ -66,6 +66,7 @@ body{
 .bannerS{
     width: 100%;
     height: inherit;
+    position: relative;
 }
 .bannerS img{
     width: 100%;
@@ -73,7 +74,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
 .bannerT{
@@ -130,7 +130,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 20%;
     margin: 0;
     font-size: 50px;
     font-weight: bolder;
@@ -142,7 +142,7 @@ body{
     display: flex;
     margin: 0;
     padding: 0;
-    height: 500px;
+    height: 80%;
     width: inherit;
 }
 
@@ -166,7 +166,7 @@ body{
 
 .markatK .marka{
     width: 20%;
-    height: inherit;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,6 +222,7 @@ body{
     text-align: center;
     padding: 10px 20px;
     box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .markaTjera>p{
@@ -233,7 +234,7 @@ body{
 
 .markaTjera .wrap{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
     flex-wrap: wrap;
     margin: 5px;
@@ -272,6 +273,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    flex-wrap: wrap;
     background: black;
 }
 
@@ -319,3 +321,86 @@ body{
     margin-right: 5px;
 }
 /* ------------ */
+
+/* Responsive queries */
+@media only screen and (max-width: 1200px){
+
+    .banneri{
+        height: 80vh;
+    }
+
+    .bannerT{
+        left: 40px;
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .header img {
+        width: 150px;
+        margin-left: 30px;
+    }
+
+    .header ul {
+        margin-right: 30px;
+    }
+    
+    .header ul li a{
+        color: black;
+        margin: 2px;
+        font-size: 16px;
+        padding: 3px 5px;
+        border-radius: 2px;
+    }
+
+    .banneri{
+        height: 60vh;
+    }
+
+    .bannerT{
+        left: 20px;
+        font-size: 50px;
+    }
+
+    .bannerT .bannerBtn{
+        height: 30px;
+        border-radius:5px;
+        margin: 0 0 50px 0;
+        font-size: 15px;
+        padding: 2px 15px;
+    }
+
+    .markatKryesore{
+        height: 500px;
+    }
+
+    .markatKryesore p {
+        font-size: 40px;
+    }
+    /* -- */
+    .markaTjera>p{
+        font-size: 30px;
+    }
+
+    .markaTjera .wrap .markat2{
+        margin: 0 2px;
+        width: 160px;
+    }
+    
+    .markaTjera div .markat2 img{
+        width: 60px;
+        height: 60px;
+        margin: 7px auto;
+    }
+
+}
+
+/* @media only screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+
+} */
+
+
+
+/* ------------------ */
