@@ -3,13 +3,8 @@ const email = document.getElementById('email');
 const komenti = document.getElementById('komenti');
 const form = document.getElementById('form');
 
-var indexN = 0;
-var indexE = 0;
-var indexK = 0;
-
 form.addEventListener('submit', (e) => {
-    checkInput();
-    if( indexN == 0 || indexE == 0 || indexK == 0 ) {
+    if( !isName() && !isEmail() && !isKoment() ) {
         e.preventDefault();
     }
 });
@@ -26,26 +21,18 @@ komenti.onblur = function(){
     isKoment();
 }
 
-function checkInput() {
-    isName();
-    isEmail();
-    isKoment();
-
-    if( indexN > 0 && indexE > 0 && indexK > 0 ){
-        window.alert('Mesazhi u dergua me sukses!');
-    }
-}
-
 function isName(){
     const nameValue = name.value.trim();
 
     if (nameValue === '') {
         setErrorFor(name, 'Kjo fushe nuk mund te lihet e zbrazet!');
+        return false;
     }else if(nameValue.length < 3 ){
         setErrorFor(name, 'Kjo fushe duhet ti kete tre apo meshum shkonja!')
+        return false;
     } else {
         setSuccessFor(name);
-        indexN++;
+        return true;
     }
 }
 
@@ -54,11 +41,13 @@ function isEmail(){
 
     if (emailValue === '') {
         setErrorFor(email, 'Kjo fushe nuk mund te lihet e zbrazet!');
+        return false;
     }else if (!isEmailReg(emailValue)){
         setErrorFor(email, 'Nuk eshte email valide!');
+        return false;
     } else {
         setSuccessFor(email);
-        indexE++;
+        return true;
     }
 }
 
@@ -66,9 +55,10 @@ function isKoment(){
     const komentiValue = komenti.value.trim();
     if (komentiValue === '') {
         setErrorFor(komenti, 'Kjo fushe nuk mund te lihet e zbrazet!');
+        return false;
     } else {
         setSuccessFor(komenti);
-        indexK++;
+        return true;
     }
 }
 

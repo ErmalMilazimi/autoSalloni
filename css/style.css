@@ -336,6 +336,10 @@ body{
 }
 
 @media only screen and (max-width: 1000px){
+    .header{
+        height: 70px;
+    }
+
     .header img {
         width: 150px;
         margin-left: 30px;
@@ -346,7 +350,6 @@ body{
     }
     
     .header ul li a{
-        color: black;
         margin: 2px;
         font-size: 16px;
         padding: 3px 5px;
@@ -395,12 +398,74 @@ body{
 
 }
 
-/* @media only screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) {
+@media only screen and (max-width: 800px){
+    .header{
+        height: 50px;
+    }
+    .header img {
+        width: 120px;
+        margin-left: 15px;
+    }
 
-} */
+    .header ul {
+        margin-right: 15px;
+    }
+    
+    .header ul li a{
+        margin: 0;
+        font-size: 14px;
+        padding: 3px 5px;
+        border-radius: 2px;
+    }
 
+    .banneri{
+        height: 55vh;
+    }
 
+    .bannerT{
+        left: 20px;
+        font-size: 45px;
+    }
+
+    .bannerT .bannerBtn{
+        height: 30px;
+        border-radius:5px;
+        margin: 0 0 35px 0;
+        font-size: 14px;
+        padding: 2px 10px;
+    }
+
+    .markatKryesore{
+        height: 400px;
+    }
+
+    .markatKryesore p {
+        font-size: 30px;
+    }
+    /* -- */
+    .markaTjera>p{
+        font-size: 25px;
+    }
+
+    .markaTjera .wrap .markat2{
+        margin: 0 2px;
+        width: 150px;
+    }
+    
+    .markaTjera div .markat2 img{
+        width: 50px;
+        height: 50px;
+        margin: 7px auto;
+    }
+
+    .markaTjera div .markat2 h3{
+        font-size: 17px;
+    }
+
+    .markaTjera div .markat2 p{
+        font-size: 12px;
+    }
+
+}
 
 /* ------------------ */
