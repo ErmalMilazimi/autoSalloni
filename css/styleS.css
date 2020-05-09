@@ -55,3 +55,84 @@
 .mainS .services:hover div .teksti{
     color: white;
 }
+
+/* ---------------- */
+
+@media only screen and (max-width:1000px){
+    .bannerS{
+        height: 300px;
+    }
+
+    .mainS{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .mainS{
+        padding: 0 30px;
+    }
+
+    .mainS .services div h3{
+        font-size: 25px;
+    }
+
+    .mainS .services div p{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .bannerS{
+        height: 250px;
+    }
+    
+    .mainS{
+        padding: 0 10px;
+    }
+
+    .mainS .services{
+        height: 220px;
+    }
+    
+    .mainS .services div{
+        margin: 15px;
+        left: 30px;
+    }
+    
+    .mainS .services div h3{
+        font-size: 20px;
+    }
+
+    .mainS .services div p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .bannerS{
+        height: 200px;
+    }
+    
+    .mainS{
+        padding: 0 10px;
+    }
+
+    .mainS .services{
+        height: 150px;
+    }
+    
+    .mainS .services div{
+        width: 100%;
+        margin: 5px;
+        left: 0;
+    }
+    
+    .mainS .services div h3{
+        font-size: 20px;
+    }
+
+    .mainS .services div p{
+        font-size: 15px;
+    }
+}

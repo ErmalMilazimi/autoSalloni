@@ -26,7 +26,7 @@
 /* ------------------- */
 /* Ana e majte */
 .mainC .left{
-    width: 500px;
+    width: 50%;
     height: auto;
 }
 
@@ -165,7 +165,7 @@
 
 /* ----------------- */
 .mainC .right{
-    width: 500px;
+    width: 50%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -212,4 +212,133 @@
     display: flex;
     justify-content: space-around;
     font-size: 30px;
+}
+
+/* Responsive */
+
+@media only screen and (max-width:1300px){
+    .mainC{
+        width: 900px;
+    }
+
+}
+
+@media only screen and (max-width:1100px){
+    .mainC{
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .mainC{
+        width: auto;
+        margin: 20px;
+    }
+
+    .mainC .left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainC .right{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .mainC{
+        padding: 0;
+    }
+
+    .contactUs{
+        font-size: 40px;
+        padding-bottom: 20px;
+        margin-top: 5px;
+    }
+    
+    .inputKlasa label{
+        font-size: 18px;
+    }
+    
+    .inputKlasa i {
+        top: 30px;
+    }
+    
+    .btnDiv{
+        align-items: flex-start;
+    }
+
+    .mainC .right{
+        width: 100%;
+    }
+    
+    .simboletC p{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .rightNames h1{
+        margin: 17px 0 5px 0;
+    }
+    
+    .rightNames h2{
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width:500px){
+
+    .contactUs{
+        font-size: 30px;
+    }
+
+    .left form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inputKlasa{
+        width: 350px;
+        padding: 0 0 20px 0;
+    }
+    
+    .inputet{
+        width: 350px;
+    }
+
+    .inputKlasa textarea{
+        width: 350px;
+    }
+
+    .simboletC p{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .simboletC .fas{
+        font-size: 25px;
+    }
+    
+    
+    .rightNames h1{
+        font-size: 21px;
+        margin: 22px 0 5px 0;
+    }
+    
+    .rightNames h2{
+        font-size: 20px;
+        margin: 20px;
+    }
+    
+    .rightNames hr {
+        width: 250px;
+    }
+    
+    .rightSimbolet{
+        font-size: 25px;
+    }
 }
