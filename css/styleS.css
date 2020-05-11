@@ -48,7 +48,7 @@
 }
 
 
-.mainS .services img:hover{
+.mainS .services:hover img{
     opacity: 0.5;
 }
 

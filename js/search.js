@@ -8,10 +8,10 @@ function kerko(){
 
     for (var i = 0; i < veturat.length; i++) {  
         if (!titulli[i].innerHTML.toLowerCase().includes(input)) { 
-            veturat[i].style.display="none"; 
+            veturat[i].style.display="none";
         } 
-        else { 
-            veturat[i].style.display="";                  
-        } 
+        // else { 
+        //     veturat[i].style.display="";                  
+        // } 
     } 
 }
