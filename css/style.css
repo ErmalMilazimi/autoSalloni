@@ -9,6 +9,78 @@ body{
     margin: 0;
     padding: 0;
 }
+/* login forma */
+
+.popup-model{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    display: none;
+    z-index: 200;
+}
+
+.loginLogo{
+    font-size: 80px;
+}
+
+.login-content , .register-content{
+	width: 500px;
+	height: auto;
+	background-color: white;
+	border-radius: 4px;
+	text-align: center;
+	padding: 20px;
+    position: relative;
+}
+
+.hidden{
+    display: none;
+}
+
+.login-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-content form small{
+    display: none;
+}
+
+.input{
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+    padding:3px 3px 3px 8px;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.logBtn{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 6px;
+    border: 0;
+    background: green;
+    cursor: pointer;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
 
 /* headeri me nav */
 .header{
@@ -49,6 +121,15 @@ body{
     border-radius: 5px;
 }
 
+.header ul li label{
+    color: black;
+    margin: 2px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .checkBtn{
     cursor: pointer;
     display: none;
@@ -63,8 +144,13 @@ body{
     color: white;
     transition: 0.5s;
 }
-/* ----------- */
 
+.header ul li label:hover {
+    background-color: rgb(189, 64, 64);
+    color: white;
+    transition: 0.5s;
+}
+/* ----------- */
 /* banneri me slider */
 
 .banneri{
@@ -501,10 +587,7 @@ body{
         position: fixed;
         width: 100%;
         height: 50vh;
-        background: linear-gradient(
-            rgba(0,0,0,0.8),
-            rgba(0,0,0,0.8)
-        );
+        background: rgba(0,0,0,0.8);
         top: 60px;
         right: -100%;
         text-align: center;

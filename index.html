@@ -19,14 +19,49 @@
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="#" id="login">LOGIN</a></li>
         </ul>
     </div>
+
+    <div class="login">
+        <div class="popup-model">
+            <div class="login-content">
+                <div class="close">+</div>
+                <div class="loginLogo"><i class="fas fa-users"></i></div>
+                <form action="">
+                    <input class="input" id="name" type="text" name="Username" placeholder="Username">
+                    <small>Error message</small>
+                    <input class="input" id="password" type="Password" name="Password" placeholder="Password">
+                    <small>Error message</small>
+                    <button class="logBtn" type="submit" name="Submitted">Login</button>
+                </form>
+            </div>
+            <div class="register-content hidden">
+				<div class="close">+</div>
+				<div class="loginLogo"><i class="fas fa-users"></i></div>
+					<form action="" method="POST">
+						<input class="input" type="text" name="fullName" placeholder="Username">
+						<input class="input" type="text" name="email" placeholder="Email">
+						<input class="input" type="Password" name="password" placeholder="Password">
+						<input type="radio" name="Gender">Female
+						<input type="radio" name="Gender">Male</br>
+						<button type="submit" name="submitted">Register</button>
+					</form>
+			</div>
+        </div>
+        <!-- <div class="popup-model">
+			
+		</div> -->
+    </div>
+    </div>
+
     <div class="banneri">
         <div class="bannerS">
             <img src="img/cars1.jpg" alt="">
             <div class="bannerT">
                 <p><span class="auto">Auto</span><span class="salloni">Salloni</span></p>
-                <button onclick="window.location.href = 'veturat.html';" class="bannerBtn">Shiko te gjitha veturat</button>
+                <button onclick="window.location.href = 'veturat.html';" class="bannerBtn">Shiko te gjitha
+                    veturat</button>
             </div>
         </div>
     </div>
@@ -178,6 +213,62 @@
     <div class="bottom">
         <p class="footerFonts" class="copyright">Copyright &copy; 2019. All Rights Reserved by AutoSalloni</p>
     </div>
+
+    <script src="js/login.js"></script>
 </body>
 
 </html>
+
+<!-- 
+
+    <div class="asd">
+		<div class="popup-model">
+			<div class="login-content">
+				<div class="close">+</div>
+				<img id="iconlogo" src="imgs/usericon.png" >
+					<form action="" method="POST">
+						<input class="input" type="text" name="Username" placeholder="Username">
+						<input class="input" type="Password" name="Password" placeholder="Password">
+						<button type="submit" name="Submitted">Login</button>
+						<button class="register" type="submit" name="submitted">Register</button>
+					</form>
+			</div>
+		</div>
+
+		<div class="popup-model">
+			<div class="register-content">
+				<div class="close">+</div>
+				<img id="iconlogo" src="imgs/usericon.png" >
+					<form action="" method="POST">
+						<input class="input" type="text" name="fullName" placeholder="Username">
+						<input class="input" type="text" name="email" placeholder="Email">
+						<input class="input" type="Password" name="password" placeholder="Password">
+						<input type="radio" name="Gender">Female
+						<input type="radio" name="Gender">Male</br>
+						<button type="submit" name="submitted">Register</button>
+					</form>
+			</div>
+		</div>
+	</div>
+		
+
+		<script type="text/javascript">
+			document.getElementById('login').addEventListener('click',function(){
+			document.querySelector('.popup-model').style.display='flex';
+			});
+
+			document.querySelector('.close').addEventListener('click',function(){
+			document.querySelector('.popup-model').style.display='none';
+			});
+
+			document.getElementById('re').addEventListener('click',function(){
+			document.querySelector('.popup-model:last-child').style.display='flex';
+			});
+
+			/*document.querySelector('.register').addEventListener('click',function(){
+				document.querySelector('.popup-model').style.display='none';
+			document.querySelector('.popup-model:last-child').style.display='flex';
+			});*/
+
+		</script>
+ -->
