@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <script defer src="js/login.js"></script>
+    <script defer src="js/logreg.js"></script>
 </head>
 
 <body>
@@ -27,50 +30,64 @@
         <div class="popup-model">
             <div class="popup-content">
                 <div class="close">+</div>
-                    <div class="loginLogo"><i class="fas fa-users"></i></div>
+                <div class="loginLogo"><i class="fas fa-users"></i></div>
                 <div class="logreg">
                     <p id="logp">LOGIN</p>
                     <p id="regp">REGISTER</p>
                 </div>
                 <div class="login-content">
-                    <form id="logform" action="">
+                    <form action="" id="form1">
                         <div class="inputKlasa">
-                            <label for="nameLog">Shkruaj emrin:</label>
-                            <input class="input" id="nameLog" type="text" name="Username" placeholder="Username">
-                            <!-- <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i> -->
+                            <label for="name">Shkruaj emrin:</label>
+                            <input class="input" id="name" type="text" name="Username" placeholder="Username" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
                         <div class="inputKlasa">
-                            <label for="passwordLog">Shkruaj passwordin:</label>
-                            <input class="input" id="passwordLog" type="Password" name="Password" placeholder="Password">
-                            <!-- <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i> -->
+                            <label for="password">Shkruaj password:</label>
+                            <input class="input" id="password" type="Password" name="Password"
+                                placeholder="Password" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
-                            
+
                         <input id="submit" type="submit" class="logBtn" value="LOGIN">
-
-
-
                     </form>
                 </div>
                 <div class="register-content hidden">
-                    <form id="regform" action="">
-                        <label for="nameReg">Shkruaj emrin:</label>
-                        <input class="input" id="nameReg" type="text" name="fullName" placeholder="Username">
-                        <label for="emailReg">Shkruaj email:</label>
-                        <input class="input" id="emailReg" type="text" name="email" placeholder="Email">
-                        <label for="passwordReg">Shkruaj passwordin:</label>
-                        <input class="input" id="passwordReg" type="Password" name="password" placeholder="Password">
+                    <form id="form2" action="">
+                        <div class="inputKlasa">
+                            <label for="name">Shkruaj emrin:</label>
+                            <input class="input" id="name" type="text" name="Username" placeholder="Username" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+
+                        <div class="inputKlasa">
+                            <label for="email">Shkruaj email:</label>
+                            <input class="input" id="email" type="email" name="Email"
+                                placeholder="Email" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+
+                        <div class="inputKlasa">
+                            <label for="password">Shkruaj password:</label>
+                            <input class="input" id="password" type="Password" name="Password"
+                                placeholder="Password">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
                         <button class="logBtn" type="submit" name="submitted">Register</button>
                     </form>
                 </div>
             </div>
         </div>
-        <!-- <div class="popup-model">
-			
-		</div> -->
     </div>
     </div>
 
@@ -232,62 +249,6 @@
     <div class="bottom">
         <p class="footerFonts" class="copyright">Copyright &copy; 2019. All Rights Reserved by AutoSalloni</p>
     </div>
-
-    <script src="js/login.js"></script>
 </body>
 
 </html>
-
-<!-- 
-
-    <div class="asd">
-		<div class="popup-model">
-			<div class="login-content">
-				<div class="close">+</div>
-				<img id="iconlogo" src="imgs/usericon.png" >
-					<form action="" method="POST">
-						<input class="input" type="text" name="Username" placeholder="Username">
-						<input class="input" type="Password" name="Password" placeholder="Password">
-						<button type="submit" name="Submitted">Login</button>
-						<button class="register" type="submit" name="submitted">Register</button>
-					</form>
-			</div>
-		</div>
-
-		<div class="popup-model">
-			<div class="register-content">
-				<div class="close">+</div>
-				<img id="iconlogo" src="imgs/usericon.png" >
-					<form action="" method="POST">
-						<input class="input" type="text" name="fullName" placeholder="Username">
-						<input class="input" type="text" name="email" placeholder="Email">
-						<input class="input" type="Password" name="password" placeholder="Password">
-						<input type="radio" name="Gender">Female
-						<input type="radio" name="Gender">Male</br>
-						<button type="submit" name="submitted">Register</button>
-					</form>
-			</div>
-		</div>
-	</div>
-		
-
-		<script type="text/javascript">
-			document.getElementById('login').addEventListener('click',function(){
-			document.querySelector('.popup-model').style.display='flex';
-			});
-
-			document.querySelector('.close').addEventListener('click',function(){
-			document.querySelector('.popup-model').style.display='none';
-			});
-
-			document.getElementById('re').addEventListener('click',function(){
-			document.querySelector('.popup-model:last-child').style.display='flex';
-			});
-
-			/*document.querySelector('.register').addEventListener('click',function(){
-				document.querySelector('.popup-model').style.display='none';
-			document.querySelector('.popup-model:last-child').style.display='flex';
-			});*/
-
-		</script>
- -->

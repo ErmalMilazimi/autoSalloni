@@ -42,7 +42,7 @@ body{
 
 .logreg p{
     background: gray;
-    width: 150px;
+    width: 125px;
     height: 30px;
     margin: 0 15px;
     padding: 5px;
@@ -56,16 +56,17 @@ body{
 
 
 .loginLogo{
-    font-size: 80px;
+    font-size: 120px;
 }
 
 .login-content , .register-content{
-	width: 500px;
+	width: 400px;
 	height: auto;
 	background-color: white;
 	border-radius: 4px;
 	text-align: center;
-	padding: 20px;
+    padding: 20px;
+    padding-bottom: 0;
     position: relative;
 }
 
@@ -80,7 +81,7 @@ body{
     height: auto;
 }
 
-.login-content form small{
+.popup-model form small{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -90,11 +91,15 @@ body{
 }
 
 .inputKlasa{
-    width: 300px;
+    width: 350px;
     height: auto;
     text-align: left;
     position: relative;
     padding: 0 0 25px 0;
+}
+
+.inputKlasa label{
+    font-weight: 600;
 }
 
 .inputKlasa.success input{
@@ -114,9 +119,18 @@ body{
     box-sizing: border-box;
 }
 
+.inputKlasa i {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    font-size: 22px;
+    visibility: hidden;
+}
+
 .logBtn{
     width: auto;
     height: auto;
+    margin-top: 15px;
     padding: 10px 30px;
     font-size: 20px;
     font-weight: bold;
@@ -139,6 +153,33 @@ body{
 .logreg p:hover{
     background: red;
     transition: .2s;
+}
+
+.input:focus{
+    border: 2px solid blue;
+}
+
+.inputKlasa.success input{
+    border: 2px solid green;
+}
+
+.inputKlasa.success i.fa-check-circle{
+    color: green;
+    visibility: visible;
+}
+
+.inputKlasa.error input{
+    border: 2px solid red;
+}
+
+.inputKlasa.error i.fa-exclamation-circle{
+    color: red;
+    visibility: visible;
+}
+
+.inputKlasa.error small{
+    visibility: visible;
+    color: red;
 }
 
 .logBtn:hover{
