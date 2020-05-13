@@ -25,29 +25,48 @@
 
     <div class="login">
         <div class="popup-model">
-            <div class="login-content">
+            <div class="popup-content">
                 <div class="close">+</div>
-                <div class="loginLogo"><i class="fas fa-users"></i></div>
-                <form action="">
-                    <input class="input" id="name" type="text" name="Username" placeholder="Username">
-                    <small>Error message</small>
-                    <input class="input" id="password" type="Password" name="Password" placeholder="Password">
-                    <small>Error message</small>
-                    <button class="logBtn" type="submit" name="Submitted">Login</button>
-                </form>
+                    <div class="loginLogo"><i class="fas fa-users"></i></div>
+                <div class="logreg">
+                    <p id="logp">LOGIN</p>
+                    <p id="regp">REGISTER</p>
+                </div>
+                <div class="login-content">
+                    <form id="logform" action="">
+                        <div class="inputKlasa">
+                            <label for="nameLog">Shkruaj emrin:</label>
+                            <input class="input" id="nameLog" type="text" name="Username" placeholder="Username">
+                            <!-- <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i> -->
+                            <small>Error message</small>
+                        </div>
+                        <div class="inputKlasa">
+                            <label for="passwordLog">Shkruaj passwordin:</label>
+                            <input class="input" id="passwordLog" type="Password" name="Password" placeholder="Password">
+                            <!-- <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i> -->
+                            <small>Error message</small>
+                        </div>
+                            
+                        <input id="submit" type="submit" class="logBtn" value="LOGIN">
+
+
+
+                    </form>
+                </div>
+                <div class="register-content hidden">
+                    <form id="regform" action="">
+                        <label for="nameReg">Shkruaj emrin:</label>
+                        <input class="input" id="nameReg" type="text" name="fullName" placeholder="Username">
+                        <label for="emailReg">Shkruaj email:</label>
+                        <input class="input" id="emailReg" type="text" name="email" placeholder="Email">
+                        <label for="passwordReg">Shkruaj passwordin:</label>
+                        <input class="input" id="passwordReg" type="Password" name="password" placeholder="Password">
+                        <button class="logBtn" type="submit" name="submitted">Register</button>
+                    </form>
+                </div>
             </div>
-            <div class="register-content hidden">
-				<div class="close">+</div>
-				<div class="loginLogo"><i class="fas fa-users"></i></div>
-					<form action="" method="POST">
-						<input class="input" type="text" name="fullName" placeholder="Username">
-						<input class="input" type="text" name="email" placeholder="Email">
-						<input class="input" type="Password" name="password" placeholder="Password">
-						<input type="radio" name="Gender">Female
-						<input type="radio" name="Gender">Male</br>
-						<button type="submit" name="submitted">Register</button>
-					</form>
-			</div>
         </div>
         <!-- <div class="popup-model">
 			

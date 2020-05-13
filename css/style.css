@@ -24,6 +24,37 @@ body{
     z-index: 200;
 }
 
+.popup-content{
+    width: auto;
+	height: auto;
+	background-color: white;
+	border-radius: 4px;
+	padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logreg{
+    display: flex;
+}
+
+.logreg p{
+    background: gray;
+    width: 150px;
+    height: 30px;
+    margin: 0 15px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+
 .loginLogo{
     font-size: 80px;
 }
@@ -42,28 +73,51 @@ body{
     display: none;
 }
 
-.login-content form{
+.popup-model form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 .login-content form small{
-    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 500;
+    font-size: 15px;
+    visibility: hidden;
+}
+
+.inputKlasa{
+    width: 300px;
+    height: auto;
+    text-align: left;
+    position: relative;
+    padding: 0 0 25px 0;
+}
+
+.inputKlasa.success input{
+    border: 2px solid green;
+}
+
+.inputKlasa.error input{
+    border: 2px solid red;
 }
 
 .input{
-    width: 50%;
+    width: 100%;
     display: block;
-    margin: 15px auto;
-    padding:3px 3px 3px 8px;
+    padding: 3px 3px 3px 8px;
     border-radius: 4px;
     font-size: 17px;
+    box-sizing: border-box;
 }
 
 .logBtn{
-    width: 100px;
-    height: 30px;
+    width: auto;
+    height: auto;
+    padding: 10px 30px;
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -80,6 +134,16 @@ body{
 	font-size: 42px;
 	transform: rotate(45deg);
 	cursor: pointer;
+}
+
+.logreg p:hover{
+    background: red;
+    transition: .2s;
+}
+
+.logBtn:hover{
+    background: red;
+    transition: .2s;
 }
 
 /* headeri me nav */
