@@ -9,7 +9,6 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <script defer src="js/login.js"></script>
-    <script defer src="js/logreg.js"></script>
 </head>
 
 <body>
@@ -32,8 +31,10 @@
                 <div class="close">+</div>
                 <div class="loginLogo"><i class="fas fa-users"></i></div>
                 <div class="logreg">
-                    <p id="logp">LOGIN</p>
-                    <p id="regp">REGISTER</p>
+                    <input class="radio" type="radio" name="lgreg" id="logp" checked>
+                    <input class="radio" type="radio" name="lgreg" id="regp">
+                    <label for="logp" id="logLbl">LOGIN</label>
+                    <label for="regp" id="regLbl">REGISTER</label>
                 </div>
                 <div class="login-content">
                     <form action="" id="form1">
@@ -59,16 +60,16 @@
                 <div class="register-content hidden">
                     <form id="form2" action="">
                         <div class="inputKlasa">
-                            <label for="name">Shkruaj emrin:</label>
-                            <input class="input" id="name" type="text" name="Username" placeholder="Username" >
+                            <label for="name2">Shkruaj emrin:</label>
+                            <input class="input" id="name2" type="text" name="Username" placeholder="Username" >
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
 
                         <div class="inputKlasa">
-                            <label for="email">Shkruaj email:</label>
-                            <input class="input" id="email" type="email" name="Email"
+                            <label for="email2">Shkruaj email:</label>
+                            <input class="input" id="email2" type="email" name="Email"
                                 placeholder="Email" >
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
@@ -76,14 +77,14 @@
                         </div>
 
                         <div class="inputKlasa">
-                            <label for="password">Shkruaj password:</label>
-                            <input class="input" id="password" type="Password" name="Password"
+                            <label for="password2">Shkruaj password:</label>
+                            <input class="input" id="password2" type="Password" name="Password"
                                 placeholder="Password">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
-                        <button class="logBtn" type="submit" name="submitted">Register</button>
+                        <input id="submit2" type="submit" class="logBtn" value="REGISTER">
                     </form>
                 </div>
             </div>

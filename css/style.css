@@ -40,7 +40,11 @@ body{
     display: flex;
 }
 
-.logreg p{
+.logreg .radio{
+    display: none;
+}
+
+.logreg label{
     background: gray;
     width: 125px;
     height: 30px;
@@ -150,9 +154,19 @@ body{
 	cursor: pointer;
 }
 
-.logreg p:hover{
+.logreg label:hover{
     background: red;
     transition: .2s;
+}
+
+.logreg #logp:checked ~ label#logLbl{
+    background: blue;
+    transition: 0.2s;
+}
+
+.logreg #regp:checked ~ label#regLbl{
+    background: blue;
+    transition: 0.2s;
 }
 
 .input:focus{
