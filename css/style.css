@@ -281,13 +281,17 @@ body{
     width: 100%;
     height: inherit;
     position: relative;
+    display: flex;
+    overflow: hidden;
 }
 .bannerS img{
     width: 100%;
+    position: absolute;
     height: inherit;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition: .3s;
 }
 
 .bannerT{

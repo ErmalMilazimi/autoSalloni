@@ -4,7 +4,7 @@ const komenti = document.getElementById('komenti');
 const form = document.getElementById('form');
 
 form.addEventListener('submit', (e) => {
-    if( !isName() && !isEmail() && !isKoment() ) {
+    if( !isName() || !isEmail() || !isKoment() ) {
         e.preventDefault();
     }
 });
