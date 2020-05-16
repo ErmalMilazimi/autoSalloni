@@ -284,14 +284,49 @@ body{
     display: flex;
     overflow: hidden;
 }
-.bannerS img{
+.bannerS .images{
     width: 100%;
     position: absolute;
     height: inherit;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: .3s;
+    transition: 1s;
+}
+
+.img1{
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(../img/cars3.jpg);
+}
+
+.img2{
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(../img/cars4.jpg);
+}
+
+.img3{
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(../img/cars5.jpg);
+}
+
+.img4{
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(../img/cars6.jpg);
+}
+
+.img5{
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5))
+        ,url(../img/cars7.jpg);
 }
 
 .bannerT{
@@ -300,7 +335,7 @@ body{
     left: 50px;
     font-size: 100px;
     margin: 0;
-
+    z-index: 90;
 }
 
 .bannerT p{
