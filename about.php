@@ -15,10 +15,10 @@
         <input type="checkbox" id="check">
         <label for="check" class="checkBtn"><i class="fas fa-bars"></i></label>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="about.php">ABOUT</a></li>
+            <li><a href="services.php">SERVICES</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
         </ul>
     </div>
     <div class="bannerA"></div>
