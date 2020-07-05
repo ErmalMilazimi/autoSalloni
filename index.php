@@ -37,30 +37,30 @@
                     <label for="regp" id="regLbl">REGISTER</label>
                 </div>
                 <div class="login-content">
-                    <form action="" id="form1">
+                    <form action="LogRegLogic/loginLogic.php" name="loginForm" method="POST" id="form1">
                         <div class="inputKlasa">
                             <label for="name">Shkruaj emrin:</label>
-                            <input class="input" id="name" type="text" name="Username" placeholder="Username">
+                            <input class="input" id="name" type="text" name="usernameLog" placeholder="Username">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
                         <div class="inputKlasa">
                             <label for="password">Shkruaj password:</label>
-                            <input class="input" id="password" type="Password" name="Password" placeholder="Password">
+                            <input class="input" id="password" type="Password" name="passwordLog" placeholder="Password">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
 
-                        <input id="submit" type="submit" class="logBtn" value="LOGIN">
+                        <input name="logSubmit" id="submit" type="submit" class="logBtn" value="LOGIN">
                     </form>
                 </div>
                 <div class="register-content hidden">
-                    <form id="form2" action="">
+                    <form action="LogRegLogic/registerLogic.php" name="registerForm" method="POST" id="form2">
                         <div class="inputKlasa">
                             <label for="name2">Shkruaj emrin:</label>
-                            <input class="input" id="name2" type="text" name="Username" placeholder="Username">
+                            <input class="input" id="name2" type="text" name="usernameReg" placeholder="Username">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
@@ -68,7 +68,7 @@
 
                         <div class="inputKlasa">
                             <label for="email2">Shkruaj email:</label>
-                            <input class="input" id="email2" type="email" name="Email" placeholder="Email">
+                            <input class="input" id="email2" type="email" name="emailReg" placeholder="Email">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
@@ -76,12 +76,12 @@
 
                         <div class="inputKlasa">
                             <label for="password2">Shkruaj password:</label>
-                            <input class="input" id="password2" type="Password" name="Password" placeholder="Password">
+                            <input class="input" id="password2" type="Password" name="passwordReg" placeholder="Password">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
-                        <input id="submit2" type="submit" class="logBtn" value="REGISTER">
+                        <input name="regSubmit" id="submit2" type="submit" class="logBtn" value="REGISTER">
                     </form>
                 </div>
             </div>
