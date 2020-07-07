@@ -4,29 +4,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AutoSalloni</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/styleV.css">
+        <link rel="stylesheet" href="css/styleV2.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
         <div class="header">
-            <a href="index.html"><img src="img/finalLogo.png" alt="Logoja"></a>
+            <a href="index.php"><img src="img/finalLogo.png" alt="Logoja"></a>
             <input type="checkbox" id="check">
             <label for="check" class="checkBtn"><i class="fas fa-bars"></i></label>
             <ul class="headerUl">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="services.php">SERVICES</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
             </ul>
         </div>
         <div class="bannerV"></div>
         <div class="mainV">
             <div class="left">
-                <form action="">
+                <div>
                     <label for="search">Kerko veturat:</label>
-                    <input type="text" class="search" id="search" onkeyup="kerko()">
-                    <!-- <button class="submitBtn" onclick="kerko()">Kerko</button> -->
+                    <input type="text" class="search" id="search" onkeyup="">
+                </div>
+                
+                <form action="" class="postoV" name="veturat">
+                    <h3>Posto veturen tende</h3>
+                    <label for="marka">Marka:</label>
+                    <input id="marka" type="text">
+                    <label for="viti">Viti:</label>
+                    <input id="viti" type="text">
+                    <label for="motorri">Motorri:</label>
+                    <input id="motorri" type="text">
+                    <label for="kilometrazha">Kilometrazha:</label>
+                    <input id="kilometrazha" type="text">
+                    <label for="fotot" class="ngarkoKetu">Ngarko fotot e vetures</label>
+                    <input id="fotot" type="file">
+
+                    <div>
+                        <input type="button" value="CANCEL">
+                        <input type="button" value="POSTO">
+                    </div>
                 </form>
             </div>
             <div class="right">
@@ -151,6 +169,5 @@
             <p class="footerFonts" class="copyright">Copyright &copy; 2019. All Rights Reserved by AutoSalloni</p>
         </div>
         <script src="js/search.js"></script>
-        <!-- <script onload="veturat()" src="js/veturat.js"></script> -->
     </body>
 </html>

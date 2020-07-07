@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoSalloni</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
@@ -14,7 +14,7 @@
 
 <body>
     <div class="header">
-        <a href="index.html"><img src="img/finalLogo.png" alt="Logoja"></a>
+        <a href="index.php"><img src="img/finalLogo.png" alt="Logoja"></a>
         <input type="checkbox" id="check">
         <label for="check" class="checkBtn"><i class="fas fa-bars"></i></label>
         <ul class="headerUl">
@@ -97,7 +97,7 @@
             <div class="images img5"></div>
             <div class="bannerT">
                 <p><span class="auto">Auto</span><span class="salloni">Salloni</span></p>
-                <button onclick="window.location.href = 'veturat.html';" class="bannerBtn">Shiko te gjitha
+                <button onclick="window.location.href = 'veturat.php';" class="bannerBtn">Shiko te gjitha
                     veturat</button>
                 <button id="login" class="bannerBtn">LOGIN / REGISTER</button>
             </div>

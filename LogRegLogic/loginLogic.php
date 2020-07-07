@@ -2,7 +2,14 @@
 
     if(isset($_REQUEST['logSubmit']))
     {
-        validateLog($_REQUEST["usernameLog"],$_REQUEST["passwordLog"]);
+        $check = validateLog($_REQUEST["usernameLog"],$_REQUEST["passwordLog"]);
+
+        if($check){
+            validateUser($_REQUEST["usernameLog"],$_REQUEST["passwordLog"]);
+        }
+        else{
+            echo 'log not successful';
+        }
     }
     else
     {
@@ -10,7 +17,17 @@
     }
 
     function validateLog($username,$password){
-        echo 'login successful';
+        if(empty($username)){
+            return false;
+        }
+        else if (empty($password)){
+            return false;
+        }
+
+        return true;
     }
 
+    function validateUser($username, $password){
+        $userArr = [$username, $password];
+    }
 ?>

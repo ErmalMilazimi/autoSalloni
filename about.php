@@ -11,7 +11,7 @@
 
 <body>
     <div class="header">
-        <a href="index.html"><img src="img/finalLogo.png" alt="Logoja"></a>
+        <a href="index.php"><img src="img/finalLogo.png" alt="Logoja"></a>
         <input type="checkbox" id="check">
         <label for="check" class="checkBtn"><i class="fas fa-bars"></i></label>
         <ul>
