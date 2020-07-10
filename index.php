@@ -57,7 +57,7 @@
                     </form>
                 </div>
                 <div class="register-content hidden">
-                    <form action="LogRegLogic/registerLogic.php" name="registerForm" method="POST" id="form2">
+                    <form action="Views/insertUserViews.php" name="registerForm" method="POST" id="form2">
                         <div class="inputKlasa">
                             <label for="name2">Shkruaj emrin:</label>
                             <input class="input" id="name2" type="text" name="usernameReg" placeholder="Username">

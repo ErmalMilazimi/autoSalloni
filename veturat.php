@@ -28,23 +28,25 @@
                     <input type="text" class="search" id="search" onkeyup="">
                 </div>
                 
-                <form action="" class="postoV" name="veturat">
+                <form action="Views/insertVeturaViews.php" class="postoV" name="veturat" method="POST">
                     <h3>Posto veturen tende</h3>
                     <label for="marka">Marka:</label>
-                    <input id="marka" type="text">
+                    <input name="marka" id="marka" type="text">
+                    <label for="modeli">Modeli:</label>
+                    <input name="modeli" id="modeli" type="text">
                     <label for="viti">Viti:</label>
-                    <input id="viti" type="text">
+                    <input name="viti" id="viti" type="text">
                     <label for="motorri">Motorri:</label>
-                    <input id="motorri" type="text">
-                    <label for="kilometrazha">Kilometrazha:</label>
-                    <input id="kilometrazha" type="text">
+                    <input name="motorri" id="motorri" type="text">
+                    <label for="kilometrat">Kilometrat:</label>
+                    <input name="kilometrat" id="kilometrat" type="text">
                     <label for="fotot" class="ngarkoKetu">Ngarko fotot e vetures</label>
                     <input id="fotot" type="file">
 
-                    <div>
+                    
                         <input type="button" value="CANCEL">
-                        <input type="button" value="POSTO">
-                    </div>
+                        <input name="postoVeturen" type="button" value="POSTO">
+                    
                 </form>
             </div>
             <div class="right">
@@ -54,7 +56,7 @@
                         <p class="titulli">Audi A8</p>
                         <p>Viti: 2018</p>
                         <p>Motorri: 4.2L Diesel</p>
-                        <p>Kilometrazha: 70000 km</p>
+                        <p>Kilometrat: 70000 km</p>
                     </div>
                 </div>
                 <div class="veturat">
@@ -63,7 +65,7 @@
                         <p class="titulli">Mercedes e63</p>
                         <p>Viti: 2020</p>
                         <p>Motorri: 6.3L Petrol</p>
-                        <p>Kilometrazha: 0 km</p>
+                        <p>Kilometrat: 0 km</p>
                     </div>
                 </div>
                 <div class="veturat">
@@ -72,7 +74,7 @@
                         <p class="titulli">BMW 750Li</p>
                         <p>Viti: 2018</p>
                         <p>Motorri: 4.2L Diesel</p>
-                        <p>Kilometrazha: 70000 km</p>
+                        <p>Kilometrat: 70000 km</p>
                     </div>
                 </div>
                 <div class="veturat">
@@ -81,7 +83,7 @@
                         <p class="titulli">Audi A7</p>
                         <p>Viti: 2016</p>
                         <p>Motorri: 4.0 Petrol</p>
-                        <p>Kilometrazha: 170000 km</p>
+                        <p>Kilometrat: 170000 km</p>
                     </div>
                 </div>
                 <div class="veturat">
@@ -90,7 +92,7 @@
                         <p class="titulli">BMW 530D</p>
                         <p>Viti: 2010</p>
                         <p>Motorri: 3.0L Diesel</p>
-                        <p>Kilometrazha: 230000 km</p>
+                        <p>Kilometrat: 230000 km</p>
                     </div>
                 </div>
                 <div class="veturat">
@@ -99,7 +101,7 @@
                         <p class="titulli">Mercedes S class</p>
                         <p>Viti: 2018</p>
                         <p>Motorri: 4.2 Petrol</p>
-                        <p>Kilometrazha: 4000 km</p>
+                        <p>Kilometrat: 4000 km</p>
                     </div>
                 </div>
                 <div class="veturat">
@@ -108,7 +110,7 @@
                         <p class="titulli">Audi A6</p>
                         <p>Viti: 2013</p>
                         <p>Motorri: 4.0 Petrol</p>
-                        <p>Kilometrazha: 240000 km</p>
+                        <p>Kilometrat: 240000 km</p>
                     </div>
                 </div>
             </div>
