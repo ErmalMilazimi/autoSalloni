@@ -1,20 +1,20 @@
 <?php
 include_once '../Controller/userController.php';
 if (isset($_REQUEST['regSubmit'])) {
-    $emri = $_REQUEST['usernameReg'];
-    $mbiemri = $_REQUEST['passwordReg'];
+    $username = $_REQUEST['usernameReg'];
+    $password = $_REQUEST['passwordReg'];
     $email = $_REQUEST['emailReg'];
     $view = new InsertView();
-    $view->insertUser($emri, $mbiemri, $email);
+    $view->insertUser($username, $password, $email);
 }
 
 class InsertView
 {
-    public function insertUser($emri, $mbiemri, $email)
+    public function insertUser($username, $password, $email)
     {
         // dergojme kerkesen ne controller
         $controller = new UserController();
-        $response = $controller->InsertUser($emri, $mbiemri, $email);
+        $response = $controller->InsertUser($username, $password, $email);
 
         if ($response) {
 ?>

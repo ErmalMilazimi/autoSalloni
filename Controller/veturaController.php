@@ -3,11 +3,11 @@ include_once '../Models/veturaMapper.php';
 include_once '../Models/VeturaModels.php';
 
     class veturaController{
-        public function insertVetura($marka, $modeli, $viti, $motorri, $kilometrat){
+        public function insertVeturaController($marka, $modeli, $viti, $motorri, $kilometrat){
 
             $vetura = new Vetura($marka, $modeli, $viti, $motorri, $kilometrat);
             $veturaM = new veturaMapper($vetura);
-            $veturaM->Insert(); 
+            $veturaM->Insert($marka,$modeli,$viti,$motorri,$kilometrat); 
             return true;
         }
     }

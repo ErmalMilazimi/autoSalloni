@@ -14,15 +14,21 @@ class veturaMapper{
     }
 
     public function Insert(){
-        $sql = "INSERT INTO AutoSalloni (marka,modeli,viti,motorri,kilometrat) values (:marka,:modeli,:viti,:motorri,:kilometrat)";
+        $sql = "INSERT INTO vetura (marka,modeli,viti,motorri,kilometrat) values (:marka,:modeli,:viti,:motorri,:kilometrat)";
+
+        $marka = $this->vetura->getMarka();
+        $modeli = $this->vetura->getModeli();
+        $viti = $this->vetura->getViti();
+        $motorri = $this->vetura->getMotorri();
+        $kilometrat = $this->vetura->getKilometrat();
 
         $statement = $this->connection->prepare($sql);
 
-        $statement->bindParam(":marka",$vetura->getMarka());
-        $statement->bindParam(":modeli",$vetura->getModeli());
-        $statement->bindParam(":viti",$vetura->getViti());
-        $statement->bindParam(":motorri",$vetura->getMotorri());
-        $statement->bindParam(":kilometrat",$vetura->getKilometrat());
+        $statement->bindParam(":marka",$marka);
+        $statement->bindParam(":modeli",$modeli);
+        $statement->bindParam(":viti",$viti);
+        $statement->bindParam(":motorri",$motorri);
+        $statement->bindParam(":kilometrat",$kilometrat);
 
         $statement->execute();
     }

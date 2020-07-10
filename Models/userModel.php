@@ -2,35 +2,35 @@
 class User
 {
     private $userID;
-    private $emri;
-    private $mbiemri;
+    private $username;
+    private $password;
     private $email;
 
-    public function __construct($emri, $mbiemri, $email)
+    public function __construct($username, $password, $email)
     {
-        $this->emri = $emri;
-        $this->mbiemri = $mbiemri;
+        $this->username = $username;
+        $this->password = $password;
         $this->email = $email;
     }
 
-    public function getEmri()
+    public function getUsername()
     {
-        return $this->emri;
+        return $this->username;
     }
-    public function getMbiemri()
+    public function getPassword()
     {
-        return $this->mbiemri;
+        return $this->password;
     }
     public function getEmail()
     {
         return $this->email;
     }
-    public function setEmri($emri)
+    public function setUsername($username)
     {
-        $this->emri = $emri;
+        $this->username = $username;
     }
-    public function setMbiemri($mbiemri)
+    public function setPassword($password)
     {
-        $this->mbiemri = $mbiemri;
+        $this->password = $password;
     }
 }

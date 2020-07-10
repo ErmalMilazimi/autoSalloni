@@ -15,7 +15,7 @@
     class insertView{
         public function insertVetura($marka, $modeli, $viti, $motorri, $kilometrat){
             $controller = new veturaController();
-            $response =$controller->insertVetura($marka, $modeli, $viti, $motorri, $kilometrat);
+            $response =$controller->insertVeturaController($marka, $modeli, $viti, $motorri, $kilometrat);
             
             if($response){
                 ?>

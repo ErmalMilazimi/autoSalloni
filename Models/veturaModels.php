@@ -2,12 +2,14 @@
     class Vetura{
         private $veturaID;
         private $marka;
+        private $modeli;
         private $viti;
         private $motorri;
         private $kilometrat;
 
-        public function __contruct($marka,$viti,$motorri,$kilometrat){
+        public function __contruct($marka,$modeli,$viti,$motorri,$kilometrat){
             $this->marka = $marka;
+            $this->modeli = $modeli;
             $this->viti = $viti;
             $this->motorri = $motorri;
             $this->kilometrat = $kilometrat;
@@ -15,6 +17,10 @@
 
         public function getMarka(){
             return $this->marka;
+        }
+
+        public function getModeli(){
+            return $this->modeli;
         }
 
         public function getViti(){
@@ -31,6 +37,10 @@
 
         public function setMarka($marka){
             $this->marka = $marka;
+        }
+        
+        public function setModeli($modeli){
+            $this->modeli = $modeli;
         }
 
         public function setViti($viti){

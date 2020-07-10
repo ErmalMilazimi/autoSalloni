@@ -12,17 +12,17 @@ class UserMapper
         $this->useri = $useri;
     }
 
-    public function Insert($emri, $mbiemri, $email)
+    public function Insert($username, $password, $email)
     {
-        $sql = "INSERT INTO users (emri,mbiemri,email) VALUES (:emri,:mbiemri,:email)";
+        $sql = "INSERT INTO users (username,password,email) VALUES (:username,:password,:email)";
 
-        $emri = $this->useri->getEmri();
-        $mbiemri = $this->useri->getMbiemri();
-        $phone = $this->useri->getEmail();
+        $username = $this->useri->getUsername();
+        $password = $this->useri->getPassword();
+        $email = $this->useri->getEmail();
 
         $statement = $this->connection->prepare($sql);
-        $statement->bindParam(":emri", $emri);
-        $statement->bindParam(":mbiemri", $mbiemri);
+        $statement->bindParam(":username", $username);
+        $statement->bindParam(":password", $password);
         $statement->bindParam(":email", $email);
 
         $statement->execute();
