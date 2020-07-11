@@ -12,7 +12,6 @@ class InsertView
 {
     public function insertUser($username, $password, $email)
     {
-        // dergojme kerkesen ne controller
         $controller = new UserController();
         $response = $controller->InsertUser($username, $password, $email);
 

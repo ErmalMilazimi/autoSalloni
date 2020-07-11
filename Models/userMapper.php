@@ -12,9 +12,9 @@ class UserMapper
         $this->useri = $useri;
     }
 
-    public function Insert($username, $password, $email)
+    public function Insert()
     {
-        $sql = "INSERT INTO users (username,password,email) VALUES (:username,:password,:email)";
+        $sql = "INSERT INTO useri (username,password,email) VALUES (:username,:password,:email)";
 
         $username = $this->useri->getUsername();
         $password = $this->useri->getPassword();

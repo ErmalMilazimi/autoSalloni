@@ -6,7 +6,7 @@ class veturaMapper{
     private $vetura;
     private $connection;
 
-    public function __construct($vetura)
+    public function __construct(Vetura $vetura)
     {
         $obj = new DBConnection();
         $this->connection = $obj->getConnection();
@@ -14,7 +14,7 @@ class veturaMapper{
     }
 
     public function Insert(){
-        $sql = "INSERT INTO vetura (marka,modeli,viti,motorri,kilometrat) values (:marka,:modeli,:viti,:motorri,:kilometrat)";
+        $sql = "INSERT INTO vetura (marka,modeli,viti,motorri,kilometrat) VALUES (:marka,:modeli,:viti,:motorri,:kilometrat)";
 
         $marka = $this->vetura->getMarka();
         $modeli = $this->vetura->getModeli();

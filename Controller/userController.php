@@ -8,7 +8,7 @@ class UserController
         $user = new User($username, $password, $email);
         $userMapper = new UserMapper($user);
         $userMapper->Insert($username, $password, $email);
-
+        return true;
     }
 
 }
