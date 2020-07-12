@@ -1,5 +1,5 @@
 <?php
-include_once 'DbConn.php';
+include_once '../DbConnection/DbConn.php';
 include_once 'userModel.php';
 class UserMapper
 {

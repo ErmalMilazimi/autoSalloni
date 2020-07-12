@@ -1,5 +1,5 @@
 <?php
-include_once 'DbConn.php';
+include_once '../DbConnection/DbConn.php';
 include_once 'veturaModels.php';
 
 class veturaMapper{
@@ -13,14 +13,15 @@ class veturaMapper{
         $this->vetura=$vetura;
     }
 
-    public function Insert(){
-        $sql = "INSERT INTO vetura (marka,modeli,viti,motorri,kilometrat) VALUES (:marka,:modeli,:viti,:motorri,:kilometrat)";
+    public function Insert($marka,$modeli,$viti,$motorri,$kilometrat)
+    {
+        $sql = "INSERT INTO veturat (marka,modeli,viti,motorri,kilometrat) VALUES (:marka, :modeli, :viti, :motorri, :kilometrat)";
 
-        $marka = $this->vetura->getMarka();
-        $modeli = $this->vetura->getModeli();
-        $viti = $this->vetura->getViti();
-        $motorri = $this->vetura->getMotorri();
-        $kilometrat = $this->vetura->getKilometrat();
+        // $marka = $this->vetura->getMarka();
+        // $modeli = $this->vetura->getModeli();
+        // $viti = $this->vetura->getViti();
+        // $motorri = $this->vetura->getMotorri();
+        // $kilometrat = $this->vetura->getKilometrat();
 
         $statement = $this->connection->prepare($sql);
 

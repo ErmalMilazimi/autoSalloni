@@ -15,7 +15,8 @@
             $this->kilometrat = $kilometrat;
         }
 
-        public function getMarka(){
+        public function getMarka()
+        {
             return $this->marka;
         }
 

@@ -16,9 +16,8 @@ class InsertView
         $response = $controller->InsertUser($username, $password, $email);
 
         if ($response) {
-?>
-            <h1>U regjistrua me sukses</h1>
-        <?php
+            header("Location: http://localhost:8012/AutoSalloniProjekt/index.php");
+            exit();
 
         } else {
         ?>
