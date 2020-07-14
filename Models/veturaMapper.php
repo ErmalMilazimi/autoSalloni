@@ -33,5 +33,17 @@ class veturaMapper{
 
         $statement->execute();
     }
+
+    public function GetVeturaMapper(){
+
+        $sql = $this->connection->prepare("SELECT * FROM veturat");
+
+        $sql->execute(); 
+
+        $result = $sql->fetch(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+    
 }
 ?>

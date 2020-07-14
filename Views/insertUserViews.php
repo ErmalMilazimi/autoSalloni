@@ -16,7 +16,7 @@ class InsertView
         $response = $controller->InsertUser($username, $password, $email);
 
         if ($response) {
-            header("Location: http://localhost:8012/AutoSalloniProjekt/index.php");
+            header("Location: http://localhost:8012/AutoSalloniProjekt/sukses.php");
             exit();
 
         } else {

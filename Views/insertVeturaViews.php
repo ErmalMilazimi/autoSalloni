@@ -18,9 +18,8 @@
             $response =$controller->insertVeturaController($marka, $modeli, $viti, $motorri, $kilometrat);
             
             if($response){
-                ?>
-                <h1>U regjistrua me sukses</h1>
-                <?php
+                header("Location: http://localhost:8012/AutoSalloniProjekt/veturat.php");
+                exit();
             }
             else{
                 ?>

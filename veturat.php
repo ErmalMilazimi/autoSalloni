@@ -31,26 +31,56 @@
                 <form action="Views/insertVeturaViews.php" class="postoV" method="POST">
                     <h3>Posto veturen tende</h3>
                     <label for="marka">Marka:</label>
-                    <input name="marka" id="marka" type="text">
+                    <input name="marka" id="marka" type="text" required>
                     <label for="modeli">Modeli:</label>
-                    <input name="modeli" id="modeli" type="text">
+                    <input name="modeli" id="modeli" type="text" required>
                     <label for="viti">Viti:</label>
-                    <input name="viti" id="viti" type="text">
+                    <input name="viti" id="viti" type="text" required>
                     <label for="motorri">Motorri:</label>
-                    <input name="motorri" id="motorri" type="text">
+                    <input name="motorri" id="motorri" type="text" required>
                     <label for="kilometrat">Kilometrat:</label>
-                    <input name="kilometrat" id="kilometrat" type="text">
+                    <input name="kilometrat" id="kilometrat" type="text" required>
                     <label for="fotot" class="ngarkoKetu">Ngarko fotot e vetures</label>
                     <input id="fotot" type="file">
 
                     <div>
-                        <input type="button" value="CANCEL">
                         <input name="postoVeturen" type="submit" value="POSTO">
                     </div>
                 </form>
             </div>
             <div class="right">
-                <div class="veturat">
+                <?php 
+
+                include 'DbConnection/DbConn.php';
+
+                $sql = 'SELECT * FROM veturat';
+
+                $dbConn = new DBConnection();
+                $conn = $dbConn->getConnection();
+
+                $sql = $conn->prepare("SELECT * FROM veturat");
+
+                $sql->execute();
+
+                while ($result = $sql->fetch(PDO::FETCH_ASSOC)) {
+                    
+                    ?>
+                    <div class="veturat">
+                    <img src="img/veturat/audiA82018.jpg" alt="">
+                    <div class="veturatInfo">
+                        <p class="titulli"> <?php echo $result['marka']." ".$result['modeli']; ?></p>
+                        <p>Viti: <?php echo $result['viti']; ?></p>
+                        <p>Motorri: <?php echo $result['motorri']; ?></p>
+                        <p>Kilometrat: <?php echo $result['kilometrat']." Km"; ?></p>
+                    </div>
+                    </div>
+                    
+                    <?php
+                }
+
+                ?>
+
+                <!-- <div class="veturat">
                     <img src="img/veturat/audiA82018.jpg" alt="">
                     <div class="veturatInfo">
                         <p class="titulli">Audi A8</p>
@@ -112,7 +142,7 @@
                         <p>Motorri: 4.0 Petrol</p>
                         <p>Kilometrat: 240000 km</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 

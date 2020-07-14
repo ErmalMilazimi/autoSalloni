@@ -1,0 +1,16 @@
+.bannerDash{
+    background: url(../img/dashboard.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerDash p {
+    color: black;
+    font-size: 80px;
+    font-weight: bolder;
+}

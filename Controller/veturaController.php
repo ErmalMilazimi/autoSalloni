@@ -10,5 +10,14 @@ include_once '../Models/VeturaModels.php';
             $veturaM->Insert($marka,$modeli,$viti,$motorri,$kilometrat); 
             return true;
         }
+    
+        public function GetVeturaController()
+        {
+            $veturat = new VeturaMapper();
+            $veturat->GetVeturaMapper();
+
+            return $veturat;
+        }
+    
     }
 ?>

@@ -88,6 +88,16 @@
         </div>
     </div>
 
+    <?php 
+
+        function alertFunction(){
+            echo '<script>
+                alert("U regjistruat me sukses!");
+            </script>';
+        }
+    
+    ?>
+
     <div class="banneri">
         <div class="bannerS">
             <div class="images img1"></div>
