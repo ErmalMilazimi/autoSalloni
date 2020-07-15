@@ -6,7 +6,7 @@
 
     <body>
         <div>
-            <p>U regjistruat me sukses!</p>
+            <p>Sukses!</p>
             <button onclick="window.location.href = 'index.php';">Kthehu te kryefaqja</button>
         </div>
     </body>

@@ -28,7 +28,7 @@
                     <input type="text" class="search" id="search" onkeyup="">
                 </div>
                 
-                <form action="Views/insertVeturaViews.php" class="postoV" method="POST">
+                <form action="Views/insertVeturaViews.php" class="postoV" method="POST" enctype="multipart/form-data">
                     <h3>Posto veturen tende</h3>
                     <label for="marka">Marka:</label>
                     <input name="marka" id="marka" type="text" required>
@@ -41,7 +41,7 @@
                     <label for="kilometrat">Kilometrat:</label>
                     <input name="kilometrat" id="kilometrat" type="text" required>
                     <label for="fotot" class="ngarkoKetu">Ngarko fotot e vetures</label>
-                    <input id="fotot" type="file">
+                    <input id="fotot" type="file" name="image">
 
                     <div>
                         <input name="postoVeturen" type="submit" value="POSTO">

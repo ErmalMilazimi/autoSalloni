@@ -13,7 +13,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleDash.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -47,6 +47,27 @@
         </div>
 
         <div class="usersDash">
+
+            <div style="width:100%; height:100px; display:flex; flex-direction: row;
+            justify-content:space-around;align-items:center">
+            <form action="deleteUser.php" method="POST" style="display:flex;flex-direction:column">
+            
+            <label for="deleteUser">Fshij usera permes ID-se:</label>
+            <input type="text" name="userId">
+            <input type="submit" value="DELETE" name="deleteBtn">
+            
+            </form>
+
+            <form action="bejAdmin.php" method="POST" style="margin:5px;display:flex;flex-direction:column">
+            
+            <label for="">Bej admin usera permes ID-se:</label>
+            <input type="text" name="userId">
+            <input type="submit" value="CONFIRM" name="adminBtn">
+            
+            </form>
+
+            </div>
+
             <?php 
 
             $sql = $conn->prepare("SELECT * FROM useri");
@@ -59,6 +80,7 @@
                 <div class="user">
                     <p>ID:<?php echo $result['id'] ?></p>
                     <p>Username:<?php echo $result['username'] ?></p>
+                    <p>Password:<?php echo $result['password'] ?></p>
                     <p>Email:<?php echo $result['email'] ?></p>
                     <p>Is Admin:<?php 
                     
@@ -79,6 +101,18 @@
         </div>
 
         <div class="veturatDash hidden">
+
+            <div style="width:100%; height:100px; display:flex; flex-direction: column;
+            justify-content:center;align-items:center">
+            <form action="deleteVetura.php" method="POST">
+            
+            <label for="deleteUser">Fshij veturat permes ID-se:</label>
+            <input type="text" name="veturaid">
+            <input type="submit" value="DELETE" name="deleteBtn">
+            
+            </form>
+            </div>
+
             <?php 
 
             $sql3 = $conn->prepare("SELECT * FROM veturat");
@@ -109,7 +143,18 @@
         </div>
 
         <div class="contactDash hidden">
-        
+            
+            <div style="width:100%; height:100px; display:flex; flex-direction: column;
+            justify-content:center;align-items:center">
+            <form action="deleteContact.php" method="POST">
+            
+            <label for="deleteUser">Fshij contactet permes emrit:</label>
+            <input type="text" name="emri">
+            <input type="submit" value="DELETE" name="deleteBtn">
+            
+            </form>
+            </div>
+
             <?php
 
                 $sql2 = $conn->prepare("SELECT * FROM contactTable");

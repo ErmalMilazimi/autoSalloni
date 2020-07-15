@@ -16,10 +16,9 @@ class InsertView
         $response = $controller->insertCtc($name, $email, $komenti);
 
         if ($response) {
-            // header("Location: http://localhost:8012/AutoSalloniProjekt/index.php");
-            // exit();
+            header("Location: http://localhost:8012/AutoSalloniProjekt/sukses.php");
+            exit();
             ?>
-            <h1>Kontakti u krye</h1>
 <?php
 
         } else {

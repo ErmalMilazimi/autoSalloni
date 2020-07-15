@@ -1,7 +1,6 @@
 <?php
     require '../DbConnection/DbConn.php';
 
-
     if(isset($_REQUEST['logSubmit']))
     {
         $check = validateLog($_REQUEST["usernameLog"],$_REQUEST["passwordLog"]);
