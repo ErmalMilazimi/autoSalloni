@@ -1,3 +1,13 @@
+<?php
+    include 'DbConnection/DbConn.php';
+
+    $dbConn = new DBConnection();
+    $conn = $dbConn->getConnection();
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -35,13 +45,9 @@
 
             <button class="buttons" id="contact">CONTACT</button>
         </div>
+
         <div class="usersDash">
             <?php 
-
-            include 'DbConnection/DbConn.php';
-
-            $dbConn = new DBConnection();
-            $conn = $dbConn->getConnection();
 
             $sql = $conn->prepare("SELECT * FROM useri");
 
@@ -75,67 +81,58 @@
         <div class="veturatDash hidden">
             <?php 
 
-            include 'DbConnection/DbConn.php';
+            $sql3 = $conn->prepare("SELECT * FROM veturat");
 
-            $sql = 'SELECT * FROM veturat';
+            $sql3->execute();
 
-            $dbConn = new DBConnection();
-            $conn = $dbConn->getConnection();
-
-            $sql = $conn->prepare("SELECT * FROM veturat");
-
-            $sql->execute();
-
-            while ($result = $sql->fetch(PDO::FETCH_ASSOC)) {
+            while ($result3 = $sql3->fetch(PDO::FETCH_ASSOC)) {
                 
                 ?>
 
                 <div class="vetura">
                     <img src="img/veturat/audiA62013.jpg" alt="">
                     <div>
-                        <p>ID:<?php echo $result['id']?></p>
-                        <p>Marka:<?php echo $result['marka']?></p>
-                        <p>Modeli:<?php echo $result['modeli']; ?></p>
-                        <p>Viti:<?php echo $result['viti']; ?></p>
-                        <p>Motorri:<?php echo $result['motorri']; ?></p>
-                        <p>Kilometrazha:<?php echo $result['kilometrat']." Km"; ?></p>
+                        <p>ID:<?php echo $result3['id']?></p>
+                        <p>Marka:<?php echo $result3['marka']?></p>
+                        <p>Modeli:<?php echo $result3['modeli']; ?></p>
+                        <p>Viti:<?php echo $result3['viti']; ?></p>
+                        <p>Motorri:<?php echo $result3['motorri']; ?></p>
+                        <p>Kilometrazha:<?php echo $result3['kilometrat']." Km"; ?></p>
                     </div>
                 </div>
                 
                 <?php
             }
-
+            
+            
             ?>
         </div>
 
         <div class="contactDash hidden">
+        
+            <?php
 
-            <?php 
+                $sql2 = $conn->prepare("SELECT * FROM contactTable");
 
-                include 'DbConnection/DbConn.php';
+                $sql2->execute();
 
-                $dbConn = new DBConnection();
-                $conn = $dbConn->getConnection();
-
-                $sql = $conn->prepare("SELECT * FROM contactTable");
-
-                $sql->execute();
-
-                while ($result = $sql->fetch(PDO::FETCH_ASSOC)) {
+                while ($result2 = $sql2->fetch(PDO::FETCH_ASSOC)) {
                     
                     ?>
                     
                     <div class="contact">
-                        <p>Username:<?php echo $result['emri'] ?></p>
-                        <p>Email:<?php echo $result['email'] ?></p>
-                        <p>Komenti:<?php echo $result['komenti'] ?></p>
+                        <p>Username:<?php echo $result2['emri'] ?></p>
+                        <p>Email:<?php echo $result2['email'] ?></p>
+                        <p>Komenti:<?php echo $result2['komenti'] ?></p>
                     </div>
                     
                     <?php
                 }
 
             ?>
+        
         </div>
+           
     </div>
 
     <div class="footeri">

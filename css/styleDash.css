@@ -20,6 +20,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: auto;
+    margin-bottom:20px ;
 }
 
 .buttonat{
