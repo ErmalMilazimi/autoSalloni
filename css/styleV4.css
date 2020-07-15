@@ -34,15 +34,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+}
+
+.filterBtn {
+    margin:10px 0px ;
+    background: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.filterBtn:hover {
+    background: red;
+    color: white;
+    transition: 0.3s;
 }
 
 .mainV .left label{
     font-size: 20px;
-}
-
-.mainV .left>div{
-    width: 100%;
-    text-align: center;
 }
 
 .mainV .left .search{
