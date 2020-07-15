@@ -12,16 +12,17 @@ class contactMapper
         $this->contact = $contact;
     }
 
-    public function Insert($emri, $email, $komenti)
+    public function Insert()
     {
         $sql = "INSERT INTO contactTable (emri,email,komenti) VALUES (:emri,:email,:komenti)";
 
-        // $username = $this->contact->getEmri();
-        // $email = $this->contact->getEmail();
-        // $komenti = $this->contact->getKomenti();
+        $username = $this->contact->getEmri();
+        $email = $this->contact->getEmail();
+        $komenti = $this->contact->getKomenti();
 
         $statement = $this->connection->prepare($sql);
-        $statement->bindParam(":emri", $emri);
+
+        $statement->bindParam(":emri", $username);
         $statement->bindParam(":email", $email);
         $statement->bindParam(":komenti", $komenti);
 

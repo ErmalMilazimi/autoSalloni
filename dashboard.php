@@ -28,8 +28,114 @@
     </div>
 
     <div class="mainDash">
+        <div class="buttonat">
+            <button class="buttons" id="users">USERS</button>
 
-        
+            <button class="buttons" id="veturat">VETURAT</button>
+
+            <button class="buttons" id="contact">CONTACT</button>
+        </div>
+        <div class="usersDash">
+            <?php 
+
+            include 'DbConnection/DbConn.php';
+
+            $dbConn = new DBConnection();
+            $conn = $dbConn->getConnection();
+
+            $sql = $conn->prepare("SELECT * FROM useri");
+
+            $sql->execute();
+
+            while ($result = $sql->fetch(PDO::FETCH_ASSOC)) {
+                
+                ?>
+                <div class="user">
+                    <p>ID:<?php echo $result['id'] ?></p>
+                    <p>Username:<?php echo $result['username'] ?></p>
+                    <p>Email:<?php echo $result['email'] ?></p>
+                    <p>Is Admin:<?php 
+                    
+                    if($result['isAdmin'] == 1){
+                        echo 'True';
+                    }
+                    else {
+                        echo 'False';
+                    }
+                    
+                    ?></p>
+                </div>
+                
+                <?php
+            }
+
+            ?>
+        </div>
+
+        <div class="veturatDash hidden">
+            <?php 
+
+            include 'DbConnection/DbConn.php';
+
+            $sql = 'SELECT * FROM veturat';
+
+            $dbConn = new DBConnection();
+            $conn = $dbConn->getConnection();
+
+            $sql = $conn->prepare("SELECT * FROM veturat");
+
+            $sql->execute();
+
+            while ($result = $sql->fetch(PDO::FETCH_ASSOC)) {
+                
+                ?>
+
+                <div class="vetura">
+                    <img src="img/veturat/audiA62013.jpg" alt="">
+                    <div>
+                        <p>ID:<?php echo $result['id']?></p>
+                        <p>Marka:<?php echo $result['marka']?></p>
+                        <p>Modeli:<?php echo $result['modeli']; ?></p>
+                        <p>Viti:<?php echo $result['viti']; ?></p>
+                        <p>Motorri:<?php echo $result['motorri']; ?></p>
+                        <p>Kilometrazha:<?php echo $result['kilometrat']." Km"; ?></p>
+                    </div>
+                </div>
+                
+                <?php
+            }
+
+            ?>
+        </div>
+
+        <div class="contactDash hidden">
+
+            <?php 
+
+                include 'DbConnection/DbConn.php';
+
+                $dbConn = new DBConnection();
+                $conn = $dbConn->getConnection();
+
+                $sql = $conn->prepare("SELECT * FROM contactTable");
+
+                $sql->execute();
+
+                while ($result = $sql->fetch(PDO::FETCH_ASSOC)) {
+                    
+                    ?>
+                    
+                    <div class="contact">
+                        <p>Username:<?php echo $result['emri'] ?></p>
+                        <p>Email:<?php echo $result['email'] ?></p>
+                        <p>Komenti:<?php echo $result['komenti'] ?></p>
+                    </div>
+                    
+                    <?php
+                }
+
+            ?>
+        </div>
     </div>
 
     <div class="footeri">
@@ -86,6 +192,8 @@
     <div class="bottom">
         <p class="footerFonts" class="copyright">Copyright &copy; 2019. All Rights Reserved by AutoSalloni</p>
     </div>
+
+    <script src="js/dashButtons.js"></script>
 </body>
 
 </html>
