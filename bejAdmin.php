@@ -10,11 +10,11 @@
 
         $admin = 2;
 
-        $sql = $conn->prepare("UPDATE useri SET isAdmin = :admin WHERE id= :id");
+        $sql = $conn->prepare("UPDATE useri SET isAdmin=:admin WHERE id=:id");
 
-        $sql->bindParam('isAdmin', $admin);
+        // $sql->bindParam('isAdmin', $admin);
 
-        $sql->execute();
+        $sql->execute(array("id"=>$id ,"isAdmin"=>$admin));
 
         header("Location: dashboard.php");
     }

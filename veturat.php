@@ -66,7 +66,7 @@
                     
                     ?>
                     <div class="veturat">
-                    <img src="img/veturat/audiA82018.jpg" alt="">
+                    <img src="img/veturat/<?php echo $result['img']; ?>" alt="">
                     <div class="veturatInfo">
                         <p class="titulli"> <?php echo $result['marka']." ".$result['modeli']; ?></p>
                         <p>Viti: <?php echo $result['viti']; ?></p>
@@ -80,69 +80,6 @@
 
                 ?>
 
-                <!-- <div class="veturat">
-                    <img src="img/veturat/audiA82018.jpg" alt="">
-                    <div class="veturatInfo">
-                        <p class="titulli">Audi A8</p>
-                        <p>Viti: 2018</p>
-                        <p>Motorri: 4.2L Diesel</p>
-                        <p>Kilometrat: 70000 km</p>
-                    </div>
-                </div>
-                <div class="veturat">
-                    <img src="img/veturat/benzE632020.jpg" alt="">
-                    <div class="veturatInfo">
-                        <p class="titulli">Mercedes e63</p>
-                        <p>Viti: 2020</p>
-                        <p>Motorri: 6.3L Petrol</p>
-                        <p>Kilometrat: 0 km</p>
-                    </div>
-                </div>
-                <div class="veturat">
-                    <img src="img/veturat/bmw7502018.jpg" alt="">
-                    <div class="veturatInfo">
-                        <p class="titulli">BMW 750Li</p>
-                        <p>Viti: 2018</p>
-                        <p>Motorri: 4.2L Diesel</p>
-                        <p>Kilometrat: 70000 km</p>
-                    </div>
-                </div>
-                <div class="veturat">
-                    <img src="img/veturat/audiA72016.jpg" alt="">
-                    <div class="veturatInfo">
-                        <p class="titulli">Audi A7</p>
-                        <p>Viti: 2016</p>
-                        <p>Motorri: 4.0 Petrol</p>
-                        <p>Kilometrat: 170000 km</p>
-                    </div>
-                </div>
-                <div class="veturat">
-                    <img src="img/veturat/bmw7502018.jpg" alt="">
-                    <div class="veturatInfo">
-                        <p class="titulli">BMW 530D</p>
-                        <p>Viti: 2010</p>
-                        <p>Motorri: 3.0L Diesel</p>
-                        <p>Kilometrat: 230000 km</p>
-                    </div>
-                </div>
-                <div class="veturat">
-                    <img src="img/veturat/benzS2018.jpg" alt="">
-                    <div class="veturatInfo">
-                        <p class="titulli">Mercedes S class</p>
-                        <p>Viti: 2018</p>
-                        <p>Motorri: 4.2 Petrol</p>
-                        <p>Kilometrat: 4000 km</p>
-                    </div>
-                </div>
-                <div class="veturat">
-                    <img src="img/veturat/audiA62013.jpg" alt="">
-                    <div class="veturatInfo">
-                        <p class="titulli">Audi A6</p>
-                        <p>Viti: 2013</p>
-                        <p>Motorri: 4.0 Petrol</p>
-                        <p>Kilometrat: 240000 km</p>
-                    </div>
-                </div> -->
             </div>
         </div>
 

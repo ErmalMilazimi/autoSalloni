@@ -6,6 +6,9 @@ if (isset($_REQUEST['regSubmit'])) {
     $email = $_REQUEST['emailReg'];
     $view = new InsertView();
     $view->insertUser($username, $password, $email);
+
+
+    $sql = "INSERT INTO veturat (marka,modeli,viti,motorri,kilometrat,img) VALUES ( :marka, :modeli, :viti, :motorri, :kilometrat)";
 }
 
 class InsertView

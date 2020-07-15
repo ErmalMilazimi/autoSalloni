@@ -8,7 +8,7 @@
         $viti=$_REQUEST['viti'];
         $motorri=$_REQUEST['motorri'];
         $kilometrat=$_REQUEST['kilometrat'];
-        $img=$_REQUEST['images'];
+        $img=$_FILES['image']['name'];
         $view = new insertView();
         $view-> insertVetura($marka, $modeli, $viti, $motorri, $kilometrat,$img);
     }

@@ -124,7 +124,7 @@
                 ?>
 
                 <div class="vetura">
-                    <img src="img/veturat/audiA62013.jpg" alt="">
+                    <img src="img/veturat/<?php echo $result3['img']?>" alt="">
                     <div>
                         <p>ID:<?php echo $result3['id']?></p>
                         <p>Marka:<?php echo $result3['marka']?></p>
